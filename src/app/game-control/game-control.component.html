@@ -1,2 +1,6 @@
-<button class="btn btn-success" (click)="onStartGame()">Start Game</button>
-<button class="btn btn-danger" (click)="onPauseGame()">Pause Game</button>
+<!-- Below I set disabled to the start and pause we have the game-control.component
+  now when we click start and/or pause the disabled status will be applied
+  and the end user will now not be able to start start multiple games/hit pause unless a game is running
+ -->
+<button class="btn btn-success" [disabled]="start" (click)="onStartGame()">Start Game</button>
+<button class="btn btn-danger" [disabled]="pause" (click)="onPauseGame()">Pause Game</button>
